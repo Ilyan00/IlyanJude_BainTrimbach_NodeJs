@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harry Potter</title>
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/signUp.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <!--peut changer-->
+  </head>
+  <body>
+    <header>
+      <!--nav avec DARKMODE-->
+      <div class="head">
+        <a href="index.html">
+          <img class="logo" src="assets/img/logo_blanc.png" alt="Logo" />
+          <p class="show">Home</p>
+          <p class="hidden">Home</p>
+        </a>
+        <h1 class="title">Harry Potter</h1>
+        <a href="profile.html">
+          <img
+            class="icone"
+            src="assets/img/utilisateur_blanc.png"
+            alt="Retour a la connexion"
+          />
+          <p class="show">Connexion</p>
+          <p class="hidden">Connexion</p>
+        </a>
+      </div>
+      <nav>
+        <!-- Icône du menu burger -->
+        <div class="burger-menu" onclick="toggleMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+
+        <ul class="nav-menu">
+          <li>
+            <a href="collection.html">Collection</a>
+          </li>
+          <li>
+            <a href="profile.html">Profil</a>
+          </li>
+          <li>
+            <a href="detail.html?slug=harry-potter">Détails</a>
+          </li>
+          <li>
+            <label class="switch">
+              <input type="checkbox" />
+              <span></span>
+            </label>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <form id="form-HarryPotter" action="index.html" method="post">
+        <div class="info">
+          <fieldset class="gauche">
+            <legend>Informations personnelles</legend>
+            <!-- Champ de texte simple -->
+            <label for="nom">Nom :</label>
+            <input
+              type="text"
+              class="gauche"
+              name="nom"
+              placeholder="Nom"
+              required
+            />
+
+            <!-- Champ de texte pour l'e-mail -->
+            <label for="email">E-mail :</label>
+            <input
+              type="email"
+              class="gauche"
+              name="email"
+              placeholder="E-mail"
+              required
+            />
+
+            <!-- Champ de texte pour le mot de passe -->
+            <label for="motDePasse">Mot de passe :</label>
+            <input
+              type="password"
+              class="gauche"
+              id="motDePasse"
+              name="motDePasse"
+              placeholder="Mot de Passe"
+              required
+            />
+            <!-- Affiche un message d'erreur pour le mot de passe -->
+            <p id="motDePasseError" class="error"></p>
+          </fieldset>
+
+          <fieldset class="droite">
+            <legend>Autres informations</legend>
+            <!-- Case à cocher -->
+            <div>
+              <label for="abonnement">S'abonner à la newsletter</label>
+              <input
+                type="checkbox"
+                id="abonnement"
+                name="abonnement"
+                value="s'abonner"
+              />
+            </div>
+
+            <!-- Boutons radio -->
+            <div>
+              <p>Genre :</p>
+              <input type="radio" id="homme" name="genre" value="homme" />
+              <label for="homme">Homme</label>
+              <input type="radio" id="femme" name="genre" value="femme" />
+              <label for="femme">Femme</label>
+              <!-- Affiche un message d'erreur pour le genre -->
+              <p id="genreError" class="error"></p>
+            </div>
+
+            <!-- Menu déroulant (select) -->
+            <div>
+              <label for="maison">Maison :</label>
+              <select id="maison" name="maison">
+                <option value="aucun">Choisir</option>
+                <option value="gryffondor">Gryffondor</option>
+                <option value="poufsouffle">Poufsouffle</option>
+                <option value="serdaigle">Serdaigle</option>
+                <option value="serpentard">Serpentard</option>
+              </select>
+            </div>
+          </fieldset>
+        </div>
+        <!-- Input de type submit pour le bouton de soumission -->
+        <input type="button" value="Envoyer" id="bt" />
+      </form>
+    </main>
+
+    <footer>
+      <p>&copy; Harry Potter</p>
+      <p>
+        Contact : <em>Ne nous contactez pas <strong>MERCI</strong></em>
+      </p>
+      <p>Mentions légales : Je sais meme pas ce que ca veut dire</p>
+      <p>FAQ : Personne pose de question c'est rapide</p>
+    </footer>
+  </body>
+  <script src="assets/javascript/header.js"></script>
+  <script src="assets/javascript/signUp.js"></script>
+</html>

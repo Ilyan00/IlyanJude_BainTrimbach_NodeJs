@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harry Potter collection</title>
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+  </head>
+  <body>
+    <header>
+      <!--nav avec DARKMODE-->
+      <div class="head">
+        <a href="index.html">
+          <img class="logo" src="assets/img/logo_blanc.png" alt="Logo" />
+          <p class="show">Home</p>
+          <p class="hidden">Home</p>
+        </a>
+        <h1 class="title">Harry Potter</h1>
+        <a href="profile.html">
+          <img
+            class="icone"
+            src="assets/img/utilisateur_blanc.png"
+            alt="Retour a la connexion"
+          />
+          <p class="show">Connexion</p>
+          <p class="hidden">Connexion</p>
+        </a>
+      </div>
+      <nav>
+        <!-- Icône du menu burger -->
+        <div class="burger-menu" onclick="toggleMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+
+        <ul class="nav-menu">
+          <li>
+            <a href="collection.html">Collection</a>
+          </li>
+          <li>
+            <a href="profile.html">Profil</a>
+          </li>
+          <li>
+            <a href="detail.html?slug=harry-potter">Détails</a>
+          </li>
+          <li>
+            <label class="switch">
+              <input type="checkbox" />
+              <span></span>
+            </label>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="info-container">
+      <div class="profile-container">
+        <h2>Profil de l'utilisateur</h2>
+        <form class="form-group">
+          <div>
+            <p type="text" id="name" name="name"></p>
+          </div>
+          <div>
+            <p type="email" id="email" name="email"></p>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; Harry Potter</p>
+      <p>
+        Contact : <em>Ne nous contactez pas <strong>MERCI</strong></em>
+      </p>
+      <p>Mentions légales : Je sais meme pas ce que ca veut dire</p>
+      <p>FAQ : Personne pose de question c'est rapide</p>
+    </footer>
+  </body>
+  <script src="assets/javascript/header.js"></script>
+  <script src="assets/javascript/profile.js"></script>
+</html>
